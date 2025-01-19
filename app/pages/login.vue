@@ -58,7 +58,7 @@ async function login()
         }
         
     } else {
-        navigateTo("/about");
+        navigateTo("/addpost");
     }
 }
 

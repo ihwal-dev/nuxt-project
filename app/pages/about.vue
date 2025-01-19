@@ -34,7 +34,7 @@
         </button>
         <button>
           <Icon name="line-md:downloading-loop" />
-          <a href="#">Download Source</a>
+          <a @click="Tessupa" href="#">Download Source</a>
         </button>
       </span>
     </div>
@@ -98,6 +98,14 @@ useHead({
 })
 
 let me = ref()
+
+
+async function Tessupa()
+{
+    const { data, err } = await useFetch('/api/add');
+
+    console.log(data ? data : err)
+}
 </script>
 
 <style scoped>

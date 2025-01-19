@@ -1,11 +1,13 @@
 <template>
-    <div class="editor">
+    <ClientOnly>
+      <div class="editor">
       <div class="skills">
         <h2>Add Post</h2>
         <label>Explore your idea</label>
       </div>
-        <Editor />
-    </div>
+          <Editor />
+      </div>
+    </ClientOnly>
 
   </template>
   

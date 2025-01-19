@@ -3,21 +3,18 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  runtimeConfig: {
+    url: 'https://qbtgslijvliafwjilfnr.supabase.co',
+    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFidGdzbGlqdmxpYWZ3amlsZm5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY1OTUxMzMsImV4cCI6MjA1MjE3MTEzM30.aFehTaF0xHp53KXdspSSoLOue-_R_c7JyS6N9AxMgWw',
+  },
   supabase: {
     redirect: false
   },
   devtools: { enabled: false },
-  routeRules: {
-    '/addpost': {ssr: false}
-  },
   modules: [
     "@nuxt/image",
     "@nuxtjs/supabase",
     "@nuxt/icon",
-    "nuxt-tiptap-editor"
   ],
-  tiptap: {
-    prefix: 'Tiptap', //prefix for Tiptap imports, composables not included
-  },
   compatibilityDate: "2025-01-11"
 })
