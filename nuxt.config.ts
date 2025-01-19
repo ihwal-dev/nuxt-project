@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   routeRules: {
-    '/blog': {ssr: false}
+    '/addpost': {ssr: false}
   },
   modules: [
     "@nuxt/image",

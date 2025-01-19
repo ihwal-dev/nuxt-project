@@ -1,23 +1,44 @@
 <template>
-    <div class="skills">
-      <h2>Add Post</h2>
-      <label>Explore your idea</label>
-      
+    <div class="editor">
+      <div class="skills">
+        <h2>Add Post</h2>
+        <label>Explore your idea</label>
+      </div>
+        <Editor />
     </div>
 
   </template>
   
   <script setup>
+  useHead({
+      title: 'iHwal - Blog '
+  })
 
+  function func(e)
+  {
+    console.log(e)
+  }
   </script>
   
-  <style scoped>
-  #app .skills {
-    flex: 1;
-    width: 100%;
-    padding: 20px;
-  }
+  <style>
   
+  #app .editor
+  {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .editor .skills
+  {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .skills h2 {
     font-size: 19px;
     font-weight: 600;
@@ -29,40 +50,27 @@
     line-height: 15px;
     font-size: 15px;
   }
-  
-  .skills .gridbox {
-    margin-top: 20px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 40px;
+
+  .editor .ql-container
+  {
+      flex: 1;
+      width: 100%;
+      border: none;
+      border: 1px solid #f6f6f6;
   }
-  
-  .gridbox .cards {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+  .ql-container .ql-editor
+  {
+    padding: 10px;
+    height: 100% !important;
   }
-  
-  .cards img {
-    max-width: 50%;
+
+  .editor .ql-toolbar
+  {
+      border: none;
+      padding: 5px;
+      border: 1px solid #f6f6f6;
   }
-  
-  @media (max-width: 680px) {
-    .skills .gridbox {
-      grid-template-columns: auto auto;
-    }
-  }
-  
-  @media (max-width: 425px) {
-    .skills .gridbox {
-      grid-gap: 20px;
-    }
-    .cards img {
-      max-width: 50%;
-    }
-  }
+
   </style>
   
