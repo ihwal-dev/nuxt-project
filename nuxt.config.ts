@@ -7,6 +7,17 @@ export default defineNuxtConfig({
     redirect: false
   },
   devtools: { enabled: false },
-  modules: ["@nuxt/image", "@nuxtjs/supabase", "@nuxt/icon"],
+  routeRules: {
+    '/blog': {ssr: false}
+  },
+  modules: [
+    "@nuxt/image",
+    "@nuxtjs/supabase",
+    "@nuxt/icon",
+    "nuxt-tiptap-editor"
+  ],
+  tiptap: {
+    prefix: 'Tiptap', //prefix for Tiptap imports, composables not included
+  },
   compatibilityDate: "2025-01-11"
 })

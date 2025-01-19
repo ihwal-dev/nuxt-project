@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="profile">
-      <img src="https://i.ibb.co.com/4Wpr637/image.png" />
+      <img src="/me.jpg" />
     </div>
     <div class="aku">
       <p>Hai Saya <strong>iHwal</strong></p>
@@ -89,9 +89,15 @@
 </template>
 
 <script setup>
- definePageMeta({
-  middleware: 'auth'
- })
+//  definePageMeta({
+//   middleware: 'auth'
+//  })
+
+useHead({
+  title: 'iHwal - About Me'
+})
+
+let me = ref()
 </script>
 
 <style scoped>
@@ -189,6 +195,7 @@
 .profile img {
   max-width: 100%;
   border-radius: 8px;
+  border-bottom: 2px solid #42b883;
 }
 
 .about .aku {
