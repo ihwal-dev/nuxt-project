@@ -12,10 +12,10 @@ const data = await useFetch('/api/getpost');
 
 if(data?.data?.value.length)
 {
-    content.value = `${data?.data?.value[0]?.content}`
+    content.value = `${data?.data?.value[4]?.content}`
     useHead({
-    title: data?.data?.value[0]?.title ? data?.data?.value[0]?.title : 'iHwal | Not Found'
-})
+    title: data?.data?.value[4]?.title ? data?.data?.value[4]?.title : 'iHwal | Not Found'
+    })
 } else {
     content.value = `No Post`
 }
@@ -42,6 +42,7 @@ if(data?.data?.value.length)
     line-height: 25px;
     font-size: 14px;
     flex-wrap: wrap;
+    
 }
 
 p img
@@ -51,8 +52,8 @@ p img
 
 .posts img
 {
-    max-width: 50%;
-    margin: 4px;
+    max-width: 100%;
+    margin: 0;
 }
 
 .posts pre
@@ -65,5 +66,11 @@ p img
     text-align: justify;
     padding: 5px;
     border-radius: 3px;
+}
+
+p strong
+{
+    font-weight: bold;
+
 }
 </style>

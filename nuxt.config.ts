@@ -8,7 +8,9 @@ export default defineNuxtConfig({
     key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFidGdzbGlqdmxpYWZ3amlsZm5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY1OTUxMzMsImV4cCI6MjA1MjE3MTEzM30.aFehTaF0xHp53KXdspSSoLOue-_R_c7JyS6N9AxMgWw',
   },
   supabase: {
-    redirect: false
+    redirect: false,
+    url: 'https://qbtgslijvliafwjilfnr.supabase.co',
+    key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFidGdzbGlqdmxpYWZ3amlsZm5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY1OTUxMzMsImV4cCI6MjA1MjE3MTEzM30.aFehTaF0xHp53KXdspSSoLOue-_R_c7JyS6N9AxMgWw',
   },
   devtools: { enabled: false },
   modules: [
